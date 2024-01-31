@@ -5,37 +5,30 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://ar-js-org.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
-<body style="margin : 0px; overflow: hidden;">
+<body style="margin: 0px; overflow: hidden;">
     <a-scene embedded arjs='trackingMethod: best;'>
 
         <!-- Marker-Based AR: 'hiro' marker for Blue Objects -->
         <a-marker preset="hiro">
-            <!-- Blue Cube -->
-            <a-box position="-1 0.5 0" material="color: blue;"></a-box>
-            <!-- Blue Sphere -->
-            <a-sphere position="0 0.5 0" radius="0.25" color="blue"></a-sphere>
-            <!-- Blue Pyramid, rotated to have the top facing the camera -->
-            <a-entity geometry="primitive: tetrahedron; radius: 0.3" position="1 0.5 0" rotation="45 45 0" material="color: blue"></a-entity>
+            <a-box position="-2 0.5 -2" material="color: blue;"></a-box>
+            <a-sphere position="0 0.5 -2" radius="0.25" color="blue"></a-sphere>
+            <a-entity geometry="primitive: tetrahedron; radius: 0.3" position="2 0.5 -2" rotation="45 45 0" material="color: blue"></a-entity>
         </a-marker>
 
         <!-- Marker-Based AR: 'kanji' marker for Red Objects -->
         <a-marker preset="kanji">
-            <!-- Red Cube -->
-            <a-box position="-1 0.5 0" material="color: red;"></a-box>
-            <!-- Red Sphere -->
-            <a-sphere position="0 0.5 0" radius="0.25" color="red"></a-sphere>
-            <!-- Red Pyramid, rotated to have the top facing the camera -->
-            <a-entity geometry="primitive: tetrahedron; radius: 0.3" position="1 0.5 0" rotation="45 45 0" material="color: red"></a-entity>
+            <a-box position="-2 0.5 2" material="color: red;"></a-box>
+            <a-sphere position="0 0.5 2" radius="0.25" color="red"></a-sphere>
+            <a-entity geometry="primitive: tetrahedron; radius: 0.3" position="2 0.5 2" rotation="45 45 0" material="color: red"></a-entity>
         </a-marker>
 
         <!-- Location-Based AR: Red objects at specified latitude and longitude -->
-        <a-entity gps-entity-place="latitude: 59.909123; longitude: 10.802399">
-            <a-box position="-1 0 0" material="color: red;"></a-box>
-            <a-sphere position="0 0 0" radius="0.25" color="red"></a-sphere>
-            <a-cylinder position="1 0 0" radius="0.25" height="0.5" color="red"></a-cylinder>
+        <a-entity gps-entity-place="latitude: 42.000000; longitude: 20.960000">
+            <a-box position="-1 0 1" material="color: red;"></a-box>
+            <a-sphere position="0 0 1" radius="0.25" color="red"></a-sphere>
+            <a-cylinder position="1 0 1" radius="0.25" height="0.5" color="red"></a-cylinder>
         </a-entity>
 
-        <!-- Camera -->
         <a-camera-static/>
     </a-scene>
 </body>
